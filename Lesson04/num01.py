@@ -1,6 +1,7 @@
+import random
 print("数あてゲームを始めます")
 print("答えの範囲は1~100です")
-answer = 10
+answer = random.randrange(start = 1, stop = 100)
 
 guess = int(input("あなたが予想する数字："))
 tries = 1
