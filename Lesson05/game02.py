@@ -74,7 +74,7 @@ win.bind("<KeyRelease-Left>", leftKeyRelease)
 
 def drawRacket():
     global rack_x
-    can.create_rectangle(rack_x, 500, rack_x+60, 520, fill="white")
+    can.create_rectangle(rack_x, 500, rack_x+60, 500, fill="white")
     if keyPress_R == True and rack_x <= 350:
         rack_x += 5
     if keyPress_L == True and rack_x >= -10:
