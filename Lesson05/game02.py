@@ -13,6 +13,10 @@ def gameOver():
     messagebox.showinfo("Infomation", "GAME OVER")
     exit()
 
+def gameClear():
+    messagebox.showinfo("Infomation", "GAME CLEAR")
+    exit()
+
 
 # 玉
 ball_x = 50
@@ -84,6 +88,7 @@ def drawBlock():
     global ball_x
     global ball_y
     global by
+    block_count = 0
     for i in range(len(block)):
         x = block[i]["x"]
         y = block[i]["y"]
@@ -93,7 +98,9 @@ def drawBlock():
             block[i]["st"] = 0
         if st == 1:
             can.create_rectangle(x ,y ,x+70, y+30, fill="white")
-
+            block_count += 1
+    if block_count == 0:
+        gameClear()
 # 表示
 
 
